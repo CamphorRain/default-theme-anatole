@@ -23,6 +23,9 @@
 
     </head>
     <body x-data="{ postSearchVisible: false }">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6267705206177514"
+        crossorigin="anonymous"></script>
+
     {{template "caicai_anatole/module/sidebar" .}}
     <div class="main">
         {{template "caicai_anatole/module/page-top" .}}
@@ -71,10 +74,19 @@
                     </div>
                 </div>
             </div>
+            <!-- 原生广告 --> 
+            <!-- 文章标题广告 -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-6267705206177514"
+                data-ad-slot="1816521617"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
             <div class="post-page">
                 <div class="post animated fadeInDown">
                     <div id="post-content" class="post-content markdown-body">
                         {{noescape .post.Content}}
+                        <!-- 文章内广告：需要修改程序实现 -->
                     </div>
                 </div>
                 <div class="pagination flex justify-between items-center">
@@ -92,6 +104,12 @@
                 <div id="comment_widget" style="margin: 30px;">
                     {{template "global.comment" .}}
                 </div>
+                <!-- 原生广告 -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-format="autorelaxed"
+                    data-ad-client="ca-pub-6267705206177514"
+                    data-ad-slot="4990314019"></ins>
             </div>
         </div>
     </div>
@@ -99,6 +117,9 @@
     {{template "caicai_anatole/module/lightgallery/scripts" .}}
     {{template "caicai_anatole/module/post-likes/scripts" .}}
     {{template "caicai_anatole/module/post-search-modal" .}}
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
     </body>
     </html>
 {{end}}
